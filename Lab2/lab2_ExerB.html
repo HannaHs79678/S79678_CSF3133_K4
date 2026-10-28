@@ -1,0 +1,165 @@
+<!-- Error 1 (Line 10): incorrect closing tag </head>; should be </header> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+</head>
+<body>
+
+    <!-- Error 1: Corrected closing tag for header -->
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+
+    <nav>
+        <a href="#results">Results</a> |
+        <a href="#form">Feedback Form</a> |
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <section id="results">
+        <h2>Feedback Summary</h2>
+
+        <table border="1">
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <!-- Error 2 (Line 20): <td> used instead of <th> -->
+                <th>Rating</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            </tr>
+
+            <!-- Error 3 (Line 26): missing closing </tr> -->
+            <tr>
+                <td>2</td>
+
+                <!-- Error 4 (Line 28): colspan="3" is incorrect for this row -->
+                <td>Tables and Forms</td>
+                <td>4.0</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <!-- Error 5 (Line 32): missing closing </td> -->
+                <td>Semantic HTML</td>
+                <td>4.0</td>
+            </tr>
+
+            <!-- New: Week 4 and Week 5 share the same topic -->
+            <tr>
+                <td>4</td>
+                <td rowspan="2">Mini Project</td>
+                <td>4.5</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>5.0</td>
+            </tr>
+
+            <!-- New: Average Rating row using colspan -->
+            <tr>
+                <td colspan="2">Average Rating</td>
+                <td>4.4</td>
+            </tr>
+            
+        </table>
+    </section>
+
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+
+        <form action="submit_feedback.php" method="post">
+
+            <!-- Error 6 (Line 39-40): label for does not match input id -->
+            <label for="fullname">Name:</label>
+            <input type="text" id="fullname" name="name" required>
+            <br><br>
+
+            <!-- New: E-mail input with matching label -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label>Overall rating:</label>
+            <br>
+
+            <!-- Error 7 (Lines 42 and 44): radio buttons must share the same name -->
+            <input type="radio" id="good" name="rating" value="Good" required>
+            <label for="good">Good</label>
+
+            <input type="radio" id="poor" name="rating" value="Poor">
+            <label for="poor">Poor</label>
+
+            <!-- New: Third radio option -->
+            <input type="radio" id="average" name="rating" value="Average">
+            <label for="average">Average</label>
+            <br><br>
+
+            <!-- New: Topics I want more practice on -->
+            <p>Topics I want more practice on:</p>
+
+            <input type="checkbox" id="html" name="practice[]" value="HTML">
+            <label for="html">HTML</label>
+            <br>
+
+            <input type="checkbox" id="tables" name="practice[]" value="Tables and Forms">
+            <label for="tables">Tables and Forms</label>
+            <br>
+
+            <input type="checkbox" id="semantic" name="practice[]" value="Semantic HTML">
+            <label for="semantic">Semantic HTML</label>
+            <br>
+
+            <!-- Original checkbox correction -->
+            <!-- Error 8 (Line 47): for="labs" does not match id="lab" -->
+            <input type="checkbox" id="lab" name="lab" value="yes">
+            <label for="lab">I attended all labs</label>
+            <br><br>
+
+            <!-- New: Section/Group drop-down list -->
+            <label for="group">Section/Group:</label>
+            <select id="group" name="group" required>
+                <option value="">-- Select Group --</option>
+                <option value="A">Group A</option>
+                <option value="B">Group B</option>
+                <option value="C">Group C</option>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+        <!-- Error 9 (Line 49): </from> should be </form> -->
+        </form>
+    </section>
+
+    <!-- New: Student Comments section with two articles -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+
+        <!-- Article 1: First student's comment -->
+        <article>
+            <h3>Aina</h3>
+            <p>The HTML lessons are helpful. I want more practice with tables.</p>
+        </article>
+
+        <!-- Article 2: Second student's comment -->
+        <article>
+            <h3>Amir</h3>
+            <p>The mini project helped me understand semantic HTML.</p>
+        </article>
+    </section>
+
+    <footer>
+        <!-- Error 10 (Line 52): copyright entity should be &copy; -->
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+
+</body>
+</html>
