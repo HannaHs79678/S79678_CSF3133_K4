@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -34,7 +35,10 @@
             <!--Order Form-->
             <div id="order">
                 <h2>Online Order Form</h2>
-                <form action="#" method="post">
+
+                <form action="#" method="post"
+                    oninput="total.value = (Number(cupcakes.value) * 3 + Number(slices.value) * 5).toFixed(2)">
+
                     <label for="customer">Customer Name :</label>
                     <input type="text" id="customer" name="customer" placeholder="Enter your name" required autofocus>
                     <br><br>
@@ -75,23 +79,28 @@
 
                     <hr>
 
-                <!--Price Calculator-->
-                <h3>Calculate Your Order</h3>
-                <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
-                <input type="number" id="cupcakes" name="cupcakes" min="0" value="0">
-                <br><br>
+                    <!--Price Calculator-->
+                    <h3>Calculate Your Order</h3>
 
-                <label for="slices">Cake Slices (RM 5.00 each):</label>
-                <input type="number" id="slices" name="slices" min="0" value="0">
-                <br><br>
+                    <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+                    <input type="number" id="cupcakes" name="cupcakes"
+                        min="0" value="0">
+                    <br><br>
+
+                    <label for="slices">Cake Slices (RM 5.00 each):</label>
+                    <input type="number" id="slices" name="slices"
+                        min="0" value="0">
+                    <br><br>
 
                     <p>
-                        Total Prices : <output name="total" for="cupcakes slices">0.00</output>
+                        Total Prices: RM
+                        <output name="total" for="cupcakes slices">0.00</output>
                     </p>
 
                     <input type="submit" value="Submit Order">
 
                 </form>
+
             </div>
 
         </div>
