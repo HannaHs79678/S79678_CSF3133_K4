@@ -1,0 +1,156 @@
+<!--Error 1 (Line 1): Incorrect DOCTYPE declaration.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket Booking</title>
+</head>
+<body>
+
+    <!--Error 2 (Line 9): Incorrect placement of span closing tag.-->
+    <!-- Header Section -->
+    <div id="header">
+        <h1>e-Ticket
+            <span>Your Campus Cinema</span>
+        </h1>
+    </div>
+
+    <!-- Navigation Section -->
+    <div id="nav">
+        <a href="#home">Home</a> |
+        <a href="#booking">Book Ticket</a> |
+        <a href="#showing">Now Showing</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <!--Error 3 (Line 11): Used span instead of div for content.-->
+    <div id="content">
+        <h2 id="home">Book Your Ticket</h2>
+        <!--Error 4 (Line 13): Incorrect HTML entities for < and &.-->
+        <p>
+            Promotion: Tickets &lt; RM10 for students &amp; staff!
+        </p>
+
+        <!--Error 5 (Line 14): Addition operator joins strings instead of numbers.-->
+        <!-- Ticket Booking Form -->
+        <form action="#" method="post"
+            oninput="
+            this.elements['total'].value =
+            Number(this.elements['adult'].value) + Number(this.elements['child'].value);
+            this.elements['price'].value =
+            (Number(this.elements['adult'].value) * 12 + Number(this.elements['child'].value) * 8).toFixed(2); ">
+
+            <!-- Customer Information -->
+            <h3>Customer Information</h3>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus>
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="012-3456789" required>
+            <br><br>
+
+            <!--Error 6 (Line 18): Incorrect email input type and missing required.-->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <br><br>
+
+            <!-- Movie and Show Information -->
+            <h3>Movie Information</h3>
+
+            <label for="date">Show Date:</label>
+            <input type="date" id="date" name="date">
+            <br><br>
+
+            <label for="time">Show Time:</label>
+            <input type="time" id="time" name="time">
+            <br><br>
+
+            <!--Error 7 (Lines 22-23): Datalist ID does not match the input list.-->
+            <label for="movie">Movie:</label>
+            <input type="text" id="movie" name="movie" list="movies" placeholder="Choose a movie">
+
+            <!-- Movie Suggestions -->
+            <datalist id="movies">
+                <option value="Space Rangers"></option>
+                <option value="Kampung Comedy"></option>
+                <option value="The Lost Kingdom"></option>
+            </datalist>
+            <br><br>
+
+            <!-- Ticket Quantity -->
+            <h3>Ticket Quantity</h3>
+            
+            <label for="adult">Adult Tickets (RM12 each):</label>
+            <input type="number" id="adult" name="adult" min="0" value="0">
+            <br><br>
+
+            <!--Error 8 (Lines 28 and 30): Missing minimum ticket quantity.-->
+            <label for="child">Child Tickets (RM8 each):</label>
+            <input type="number" id="child" name="child" min="0" value="0">
+            <br><br>
+
+            <!-- Service Rating -->
+            <label for="rating">Rate Our Service:</label>
+            <!--Error 9 (Line 32): Range slider has reversed min and max.-->
+            <input type="range" id="rating" name="rating" min="1" max="5" step="1" value="3">
+            <br><br>
+
+            <!-- Total Ticket Calculator -->
+            <h3>Booking Summary</h3>
+            <!--Error 10 (Line 33): Incorrect output for attribute.-->
+            Total Tickets:
+            <output name="total" for="adult child">0</output>
+            <br><br>
+
+            <!-- Total Price Calculator -->
+            Total Price: RM
+            <output name="price" for="adult child">0.00</output>
+            <br><br>
+
+            <input type="submit" value="Book Now">
+        </form>
+    </div>
+
+    <!-- Sidebar Section: Now Showing -->
+    <div id="sidebar">
+        <h2 id="showing">Now Showing</h2>
+
+        <ul>
+            <li>
+                <strong>Space Rangers</strong>
+                <span> (PG)</span>
+                <a href="https://www.youtube.com/results?search_query=Space+Rangers+movie+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>Kampung Comedy</strong>
+                <span> (U)</span>
+                <a href="https://www.youtube.com/results?search_query=Kampung+Comedy+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+
+            <li>
+                <strong>The Lost Kingdom</strong>
+                <span> (PG-13)</span>
+                <a href="https://www.youtube.com/results?search_query=The+Lost+Kingdom+trailer">
+                    Watch Trailer
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <!--Error 11 (Line 38): Incorrect copyright entity capitalization.-->
+    <div id="footer">
+        <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday</p>
+        <p> Tickets &amp; snacks available at our cinema.</p>
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+    </div>
+<!--Error 12 (Lines 41, 54 and 55): Duplicate closing HTML tags.-->
+</body>
+</html>
