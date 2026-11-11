@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!--Error 13 (Head): Missing viewport meta tag for responsive design.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>e-Café Campus</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="cafe.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>e-Café Campus</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+
+            <!--Error 9 (Line 34): Missing # in href to link to the menu section.-->
+            <li><a href="#menu">Menu</a></li>
+
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Today's Menu</h2>
+
+        <p class="intro">
+            Freshly brewed coffee and local delights every day.
+        </p>
+
+        <!-- Menu Item 1 -->
+        <article id="item" class="item">
+            <h3>Kopi Tarik</h3>
+
+            <p>
+                Only
+                <span class="old-price">RM 4.50</span>
+                <span class="highlight">RM 3.50</span>
+            </p>
+        </article>
+
+        <!--Error 10 (Line 46): Duplicate id="item". Use class="item" instead.-->
+        <!-- Menu Item 2 -->
+        <article class="item">
+            <h3>Nasi Lemak</h3>
+
+            <p>
+                Only
+                <span class="old-price">RM 6.00</span>
+                <span class="highlight">RM 5.00</span>
+            </p>
+        </article>
+
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Watch Our Story</h2>
+
+        <figure>
+
+            <!--Error 11 (Line 53): Missing controls attribute in the video element.-->
+            <video width="400" height="300" controls>
+
+                <!--Error 12 (Line 54): Incorrect MIME type. Use video/mp4 instead of mp4.-->
+                <source src="cafe.mp4" type="video/mp4">
+
+                Your browser does not support the video tag.
+
+            </video>
+
+            <!-- Video Caption -->
+            <figcaption>
+                Discover the delicious food and drinks at e-Café Campus.
+            </figcaption>
+
+        </figure>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+
+        <form class="feedback-form" action="#" method="post">
+
+            <!-- Customer Information -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+            <br><br>
+
+            <!-- Visit Type -->
+            <p>Visit Type:</p>
+
+            <input type="radio" id="dinein" name="visit" value="Dine-in" required>
+            <label for="dinein">Dine-in</label>
+
+            <input type="radio" id="takeaway" name="visit" value="Take-away">
+            <label for="takeaway">Take-away</label>
+            <br><br>
+
+            <!-- Favourite Items -->
+            <p>Favourite Items:</p>
+
+            <input type="checkbox" id="coffee" name="favourite" value="Coffee">
+            <label for="coffee">Coffee</label>
+            <br>
+
+            <input type="checkbox" id="nasilemak" name="favourite" value="Nasi Lemak">
+            <label for="nasilemak">Nasi Lemak</label>
+            <br>
+
+            <input type="checkbox" id="cake" name="favourite" value="Cake">
+            <label for="cake">Cake</label>
+            <br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Feedback">
+
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus</p>
+
+        <!-- Contact Information -->
+        <address>
+            Contact us:
+            <a href="mailto:ecafe@gmail.com">ecafe@gmail.com</a>
+        </address>
+    </footer>
+
+</body>
+</html>

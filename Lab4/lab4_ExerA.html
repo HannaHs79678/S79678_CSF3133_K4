@@ -1,0 +1,147 @@
+<!--Question 1: HTML5 Page Structure-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visit Terengganu - Tourism Promotion</title>
+
+<!-- Question 4: External CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Question 4: Internal CSS (2 rules) -->
+<style>
+    header {
+        background-color: teal;
+        color: white;
+        text-align: center;
+    }
+
+    #trip {
+        background-color: #e6f2f2;
+    }
+</style>
+</head>
+
+<body>
+<!-- Question 1: HTML5 Structure - Header -->
+<header>
+    <h1>Visit Terengganu</h1>
+    <p>Discover the Beauty of Terengganu</p>
+</header>
+
+<!-- Question 1&2: Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#trip">Plan Your Trip</a></li>
+    </ul>
+</nav>
+
+<!-- Question 1: HTML5 Structure -Destinations Section -->
+<section id="destinations">
+    <h2>Popular Destinations</h2>
+
+    <!-- Question 1: Article 1,2,3-->
+    <article class="card">
+        <h3>Redang Island</h3>
+        <p>Enjoy beautiful beaches and clear blue waters at Redang Island.</p>
+        <p class="price">
+            Promotion Price:
+            <span class="old-price">RM299</span>
+            RM199
+        </p>
+    </article>
+
+    <article class="card">
+        <h3>Perhentian Island</h3>
+        <p>Explore marine life and enjoy exciting snorkelling activities.</p>
+        <p class="price">
+            Promotion Price:
+            <span class="old-price">RM250</span>
+            RM180
+        </p>
+    </article>
+
+    <article class="card">
+        <h3>Lake Kenyir</h3>
+        <p>Experience nature, waterfalls and beautiful scenery at Lake Kenyir.</p>
+        <p class="price">
+            Promotion Price:
+            <span class="old-price">RM200</span>
+            RM150
+        </p>
+    </article>
+
+    <!-- Question 1: Meter Element -->
+    <p>Tourism Promotion Progress:</p>
+    <meter min="0" max="40" value="28">28 out of 40</meter>
+</section>
+
+<!-- Question 3: Video Section -->
+<section id="video">
+    <h2>Explore Terengganu</h2>
+    <figure>
+        <video width="600" height="400" controls>
+            <source src="terengganu.mp4" type="video/mp4">
+        </video>
+
+        <figcaption class="caption">
+            Discover the beautiful attractions of Terengganu.
+        </figcaption>
+    </figure>
+</section>
+
+<!-- Question 7: Trip Registration Form -->
+<section id="trip">
+    <h2>Plan Your Trip</h2>
+
+    <form class="trip-form">
+        <!-- Name and Email -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Traveller Type -->
+        <p>Traveller Type:</p>
+        <input type="radio" id="student" name="traveller" value="Student">
+        <label for="student">Student</label>
+        <input type="radio" id="staff" name="traveller" value="Staff">
+        <label for="staff">Staff</label>
+        <input type="radio" id="public" name="traveller" value="Public">
+        <label for="public">Public</label>
+        <br><br>
+
+        <!-- Interests -->
+        <p>Interests:</p>
+        <input type="checkbox" id="islands" name="interests" value="Islands">
+        <label for="islands">Islands</label>
+        <input type="checkbox" id="food" name="interests" value="Food">
+        <label for="food">Food</label>
+        <input type="checkbox" id="culture" name="interests" value="Culture">
+        <label for="culture">Culture</label>
+        <input type="checkbox" id="nature" name="interests" value="Nature">
+        <label for="nature">Nature</label>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- Question 1: Footer -->
+<footer>
+    <p>&copy; 2026 Visit Terengganu. All Rights Reserved.</p>
+    <address>
+        Contact us:
+        <a href="mailto:info@visit-terengganu.com">info@visit-terengganu.com </a>
+    </address>
+</footer>
+
+</body>
+</html>
