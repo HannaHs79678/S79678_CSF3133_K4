@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Campus Bookstore</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- External CSS -->
     <link rel="stylesheet" href="shop.css">
 
+    <!-- Internal CSS -->
     <style>
         h1 {
             text-align: center;
@@ -20,65 +25,83 @@
 <!--
 Error 1 (shop.html, Line 7): rel="stylesheets" corrected to rel="stylesheet".
 Error 2 (shop.html, Lines 10-12): Internal CSS moved into the head section.
-Error 3 (shop.html, Line 18): Incorrect inline CSS syntax corrected from color= to color:.
-Error 4 (shop.html, Line 20): Table ID product is matched with CSS selector #product.
-Error 5 (shop.css, Line 2): Robotto corrected to Roboto.
-Error 6 (shop.css, Line 4): no repeat corrected to no-repeat.
-Error 7 (shop.css, Line 5): bacground-position corrected to background-position.
-Error 8 (shop.css, Line 18): display: inline corrected to display: block.
-Error 9 (shop.css, Line 23): li:a:hover corrected to li a:hover.
-Error 10 (shop.css, Line 27): border-collapse: collapsed corrected to collapse.
-Error 11 (shop.css, Line 34): nth-child(2) corrected to nth-child(even).
-Error 12 (shop.css, Line 37): tr:hovered corrected to tr:hover.
-Error 13 (shop.css, Lines 45-46): Missing semicolon added.
+Error 3 (shop.html, Lines 13-17): Navigation menu placed inside the nav element.
+Error 4 (shop.html, Line 18): Incorrect inline CSS syntax corrected from color= to color:.
+Error 5 (shop.html, Line 20): Table ID product matched with CSS selector #product.
+Error 6 (shop.css, Line 2): Robotto corrected to Roboto.
+Error 7 (shop.css, Line 4): no repeat corrected to no-repeat.
+Error 8 (shop.css, Line 5): bacground-position corrected to background-position.
+Error 9 (shop.css, Line 18): display: inline corrected to display: block.
+Error 10 (shop.css, Line 23): li:a:hover corrected to li a:hover.
+Error 11 (shop.css, Line 27): border-collapse: collapsed corrected to collapse.
+Error 12 (shop.css, Line 34): nth-child(2) corrected to nth-child(even).
+Error 13 (shop.css, Line 37): tr:hovered corrected to tr:hover.
+Error 14 (shop.css, Lines 45-46): Missing semicolon added.
 -->
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#books">Books</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <h1 id="home" style="color: #1B4F72;">Campus Bookstore</h1>
+    <!-- Header -->
+    <header id="home">
+        <h1>Campus Bookstore</h1>
+        <p>Textbooks, stationery and more for every student.</p>
+    </header>
 
-    <p>Textbooks, stationery and more for every student.</p>
+    <!-- Main Content -->
+    <main>
 
-    <table id="product">
+        <section id="books">
 
-        <tr>
-            <th>Item</th>
-            <th>Category</th>
-            <th>Price (RM)</th>
-        </tr>
+            <h2>Available Products</h2>
 
-        <tr>
-            <td>Web Design Basics</td>
-            <td>Textbook</td>
-            <td>45.00</td>
-        </tr>
+            <table id="product">
 
-        <tr>
-            <td>A4 Notebook</td>
-            <td>Stationery</td>
-            <td>6.50</td>
-        </tr>
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Price (RM)</th>
+                </tr>
 
-        <tr>
-            <td>USB Drive 32GB</td>
-            <td>Gadget</td>
-            <td>25.00</td>
-        </tr>
+                <tr>
+                    <td>Web Design Basics</td>
+                    <td>Textbook</td>
+                    <td class="price">45.00</td>
+                </tr>
 
-        <tr>
-            <td>Highlighter Set</td>
-            <td>Stationery</td>
-            <td>9.90</td>
-        </tr>
+                <tr>
+                    <td>A4 Notebook</td>
+                    <td>Stationery</td>
+                    <td class="price">6.50</td>
+                </tr>
 
-    </table>
+                <tr>
+                    <td>USB Drive 32GB</td>
+                    <td>Gadget</td>
+                    <td class="price">25.00</td>
+                </tr>
 
-    <footer>
-        &copy; 2026 Campus Bookstore
+                <tr>
+                    <td>Highlighter Set</td>
+                    <td>Stationery</td>
+                    <td class="price">9.90</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 Campus Bookstore</p>
     </footer>
 
 </body>
