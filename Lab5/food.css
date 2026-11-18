@@ -1,0 +1,173 @@
+
+/* GENERAL STYLE */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #faf7f1;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+
+/* 1. HEADER WITH BACKGROUND IMAGE */
+.header {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("header-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 175px;
+    padding: 38px 20px;
+    text-align: center;
+    color: white;
+}
+
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin: 0 0 8px;
+}
+
+.header p {
+    margin: 0;
+}
+
+
+/* 2. NAVIGATION BAR */
+nav {
+    background-color: #303030;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+}
+
+/* HOVER EFFECT */
+nav a:hover {
+    background-color: #555;
+}
+
+/* ACTIVE PAGE */
+nav a.active {
+    background-color: #e9822e;
+}
+
+
+/* 3. CONTENT SECTION */
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 22px;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+
+/* 4. FREE ENTRY NOTICE */
+.notice {
+    border: 2px ;
+    margin: 18px 0 20px;
+}
+
+
+/* 5. MENU TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 2px ;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+}
+
+th {
+    background-color: #e9822e;
+    color: white;
+    text-align: center;
+}
+
+td:first-child {
+    text-align: center;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+/* ALTERNATING ROW COLOUR */
+tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* TABLE HOVER EFFECT */
+tr:hover {
+    background-color: #ffedcf;
+}
+
+
+/* 6. FOOTER */
+footer {
+    background-color: #eee7d9;
+    color: #666;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 11px;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    nav a {
+        padding: 12px 13px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    th, td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+}
