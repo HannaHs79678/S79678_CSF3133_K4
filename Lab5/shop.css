@@ -1,0 +1,133 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Horizontal Navigation Menu */
+nav li {
+    float: left;
+}
+
+/* Navigation Links */
+nav li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Navigation Hover Effect */
+nav li a:hover {
+    background-color: #111;
+}
+
+/* Active Home Link */
+nav li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Header Background Image */
+header {
+    background-image: url("books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1B4F72;
+}
+
+/* Main Heading */
+h1 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    color: white;
+}
+
+/* Section Heading */
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #1B4F72;
+}
+
+/* Paragraph Styling */
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Main Content */
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 20px auto;
+}
+
+/* Product Table */
+#product {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Table Borders and Padding */
+#product td,
+#product th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Alternating Row Colours */
+#product tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table Hover Effect */
+#product tr:hover {
+    background-color: #ddd;
+}
+
+/* Table Header */
+#product th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Align Price Column to the Right */
+#product .price {
+    text-align: right;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    nav li {
+        float: none;
+    }
+
+    main {
+        width: 95%;
+    }
+}
