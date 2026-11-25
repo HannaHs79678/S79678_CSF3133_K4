@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+
+    <!--external CSS-->
+    <link rel="stylesheet" href="styleB.css">
+</head>
+
+<body>
+    <h2>Student Grade Calculator</h2>
+
+    <!--Error 1 (grade.html, Line 9): Form submission must return the function result to prevent page reload-->
+    <form name="gradeForm" onsubmit="return checkMark()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+
+        <label for="mark">Mark (0-100):</label>
+        <input type="text" id="mark" name="mark">
+        <br><br>
+
+        <!--Form buttons-->
+        <button type="submit">Check Grade</button>
+        <button type="button" onclick="randomMark()">Random Mark</button>
+    </form>
+
+    <p id="result"></p>
+    <p id="checkTime"></p>
+
+    <!--Error 2 (grade.html, Line 17): showtable() has incorrect function name. Correct name is showTable()-->
+    <button type="button" onclick="showTable()">Show Grade Table</button>
+    <div id="tableContainer"></div>
+
+    <!--external js file-->
+    <script src="grade.js"></script>
+</body>
+</html>
