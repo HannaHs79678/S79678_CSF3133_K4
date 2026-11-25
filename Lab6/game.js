@@ -131,6 +131,9 @@ function resetGame() {
         "<th>Result</th>" +
         "</tr>";
 
+    //Clear Player Name
+    document.getElementById("playerName").value = "";
+
     //Clear result and summary
     document.getElementById("result").innerHTML = "";
     document.getElementById("summary").innerHTML = "";
